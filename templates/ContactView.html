@@ -1,0 +1,27 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container" id="ListaKontaktow">
+    <div class="col-md-12">
+       <h3>Lista kontaktów</h3>
+           {% for contact in contact %}
+<div class="dropdown" >
+  <button id="pole_kontaktu" class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   {{ contact.name}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="lista_kontaktow">
+    <a class="dropdown-item" href="#">{{contact.imie}} {{ contact.nazwisko }}</a>
+    <a class="dropdown-item" href="#">{{ contact.profesja }}</a>
+    <a class="dropdown-item" href="#">{{ contact.miasto }}</a>
+  </div>
+</div>
+{% endfor %}
+             </div>
+
+</div>
+
+
+
+
+{% endblock %}

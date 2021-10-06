@@ -1,0 +1,181 @@
+@media (max-width: 640px) { 
+    
+    body {
+    font-size:1rem;
+     margin-left: auto;
+    margin-right: auto;
+    }
+    #menu_male{
+        max-width: 600px;
+    }
+    #wideo_intro{
+        text-align: center;
+        margin: auto;
+    }
+      #wideo_intro iframe{
+        padding-left: 0px;
+        width: 400px;
+        height: 300px;
+    }
+} 
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    body{
+            margin-left: auto;
+    margin-right: auto;
+    }
+  #menu {
+    max-width: 800px;
+      font-size: 15px;
+  }
+   #menu_male a {
+        color: #fff;
+       font-weight: 600;
+    }
+    a:link {
+        color: #fff;
+    }
+    a:hover {
+        color: #fff;
+        font-weight: 900;
+    }
+    #intro_lewa{
+        display: none;
+    }
+    #logo_intro_srednie{
+        padding-top: 50px;
+    }
+        #logo_intro{
+        display: none;
+    }
+    
+    #aktualnosci_srednie{
+        padding-top: 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+    #about_srednie {
+        padding-top: 20px;
+    }
+    
+      #about_srednie {
+        padding-top: 20px;
+    }
+    #about_srednie h1{
+        font-weight: 900;
+        color: #ee373a;
+    }
+    #infoSerwis_srednie_col {
+        text-align: center;
+        font-weight: 700;
+    }
+     #infoSerwis_srednie h2 {
+        text-align: center;
+         font-weight: 700;
+    }
+    
+    
+        #infoSerwis_srednie_col2 {
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    #wideo_intro iframe{
+        left: 0px;
+        width: 100%;
+        height: 300px;
+    }
+    
+    #video h1{
+        padding-bottom: 5px;
+        padding-top: 10px;
+        text-align: center;
+        color: #ee373a;
+    }
+      #video h2{
+        padding-bottom: 10px;
+          text-align: center;
+          font-size: 1em;
+    }
+    footer{
+        text-align: center;
+        font-size: 10px;
+    }
+    #footer_menu_lewa{
+        border-right: none;
+    }
+    #footer_menu_prawa{
+        border-right: none;
+    }
+    #aktualnosci{
+        display: none;
+    }
+    #about{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 801px) {
+    #intro_lewa_srednie {
+        display: none;
+    }
+    #logo_intro_srednie {
+        display: none;
+    }
+    #aktualnosci_srednie {
+        display: none;
+    }
+    #about_srednie{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:701px){
+    #menu{
+       display: none;
+    }
+}
+#menu_male{
+     background-color: rgb(238, 55, 58);
+
+    align-content: center;
+     width: 100%;
+   
+}
+
+
+#menu_male a:link{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+#menu_male a:hover{
+    color: rgb(35, 31, 31);
+    text-decoration: none;
+    font-weight: 700;
+}
+.dropdown-menu{
+    background-color: rgb(238,55,58);
+    width: 100%;
+}
+    #dropdown li{
+        list-style: none;
+        margin-left: 1px;
+    }
+
+@media only screen and (min-width: 700px){
+    #menu_male{
+        display: none;
+        
+    }
+    #dropdown-menu{
+        background-color: rgba (238, 55, 58, 0.5);
+    }
+
+
+}

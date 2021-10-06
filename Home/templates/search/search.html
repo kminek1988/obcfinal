@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+    {% block content %}
+<section id="szukajka">
+    <div class="container" id="search_container">
+<div id="search_container_intro" class="text-center">
+<h5>SZUKAJ OBROTNEGO</h5>
+<p>Wszyscy Obrotni wybierając kategorię zapisali się do największego miasta w swojej okolicy.</p>
+<p>Mają jednak możliwość sprecyzować lokację.</p>
+<p>Wpisz profesję i miasto, które Cię interesuje, aby znaleźć w nim Obrotnego.</p>
+</div>
+
+    <form method="get" action=".">
+
+
+            {{ form.q|as_crispy_field }}
+
+        <div id="szukaj" class='col-md-4 offset-md-4'><button type="submit" value="Szukaj">Szukaj</button></div>
+
+        {% if query %}
+            <h3 id="wynik_wyszukiwania">Wyniki wyszukiwania:</h3>
+
+            {% for result in page.object_list  %}
+<ul style="display:inline-block;">
+           <li class="inline-block card text-center">
+                    <a href="{{ result.object.get_absolute_url }}">{{result.object.user }}<br>{{ result.object.profesja }}<br>{{ result.object.miasto }}<br>
+                        {{ result.object.typ }}<br>
+                    <img src="{{ result.object.profilimg.url}}" class="img-thumbnail " style="width:200px; height:200px;"></a>
+                </li>
+
+</ul>
+
+            {% empty %}
+                <p>Nic nie znaleziono :(</p>
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+    </form>
+    </div>
+</section>
+{% endblock %}

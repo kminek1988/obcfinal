@@ -1,0 +1,135 @@
+#postman {
+/*    background-color: #fff;*/
+   padding-top: 75px;
+    min-height: 800px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#postman_gl{
+    background-color: rgba(255, 255, 255, 0.5);
+    min-height: 800px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#postman_menu_section{
+    padding-top: 50px;
+}
+#postman button {
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+    background-color:  #231f20;
+    border: solid 1px #231f20;
+    color: #ffff;
+    font-weight: 700px;
+}
+#postman_menu {
+
+  height: 600px;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+
+  left: 0px;
+    padding-left: 20px;
+
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+#postman_menu ul{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#postman_menu a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #231f20;
+  display: block;
+    font-weight: 700;
+}
+
+#postman_menu a:hover {
+  color: #ee373a;
+}
+.main {
+
+
+  padding: 50px 50px 50px 50px;
+    min-height: 500px;
+    background-color: #fff;
+    padding: 50px 50px 50px 50px;
+}
+
+#button_postman{
+    padding-top: 50px;
+  padding-left: 100px;
+}
+#postman_menu_nav{
+    background-color: #eff4f5;
+}
+
+#koperta{
+    width: 80px;
+}
+
+#ListaKontaktow{
+    background-color: #eff4f5;
+    color: #231f20;
+    padding-top: 20px;
+}
+#dropdownMenuButton{
+    color: #231f20;
+    text-decoration: none;
+}
+#lista_kontaktow{
+background-color: #eff4f5;
+}
+#lista_kontaktow a:link{
+    color: #231f20;
+    text-decoration: none;
+}
+#lista_kontaktow a:hover{
+    color: #ee373a;
+    text-decoration: none;
+}
+#okno_wiadomosci{
+
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px 50px 50px 50px;
+    border: solid 1px #464646;
+}
+#postman_write_base{
+    padding-bottom: 100px;
+
+}
+
+#wyslij_wiad{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ee373a;
+    border: solid #ee373a 1px;
+    color: #fff;
+    font-weight: 600;
+}
+#pm_byModes {
+    padding-top: 50px;
+}
+#pm_buttons{
+    padding-bottom: 50px;
+}
+#pm_messages a {
+    color: #ee373a;
+    padding-left: 10px;
+}
+#pm_messages td{
+    padding-left: 10px;
+    width: 300px;
+}
+.pad_bottom_20{
+    padding-bottom: 20px;
+}
+
+#wroc{
+    padding-right: 20px;
+    color: #ee373a;
+}

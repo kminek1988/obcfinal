@@ -1,0 +1,4 @@
+{{ object.user }}
+{{object.profesja}}
+{{ object.miasto }}
+{{ object.text }}

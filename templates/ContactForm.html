@@ -1,0 +1,16 @@
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section>
+
+<form method="post" novalidate action="{% url 'nowy' %}">
+  {% csrf_token %}
+{{ form|crispy}}
+ <div id="prof_save_button" class="text-center">
+ <button type="submit">Zapisz</button>    
+</div>
+</form>
+</section>
+
+{% endblock %}

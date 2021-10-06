@@ -1,0 +1,192 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+
+
+<html lang="pl">
+  <head>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/dokumenty.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/formularz.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/auth.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/search.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/obcpress.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/profil.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/edytuj.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/lists.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/katView.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/profil_view.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/edytuj_kategorie.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/prof.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/kontakt_utworzony.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/kategorieFinalEdit.css' %}">
+<link type="text/css" media="all" rel="stylesheet" href="{% static '/css/postman.css' %}">
+<!--      średnie-->
+<link type="text/css" media="all" rel="stylesheet" href="{% static '/css/srednie_home.css' %}">
+<link type="text/css" media="all" rel="stylesheet" href="{% static '/css/srednie_profil_view.css' %}">
+<link type="text/css" media="all" rel="stylesheet" href="{% static '/css/auth_srednie.css' %}">
+<link type="text/css" media="all" rel="stylesheet" href="{% static '/css/poczta_mala.css' %}">
+
+<!--      Avilion -->
+      
+
+<!--search bar -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <title>Obrotni Biało-Czerwoni {% block title %}{% endblock %}
+    {% block head_title %}{% endblock %}</title>
+
+  {% block extra_head %}
+    {% endblock %}
+
+{% block extrahead %}{% endblock %}
+  </head>
+   <body>
+
+  <!-- ======= Header ======= -->
+
+<header>
+        <div class="container" id="menu">
+  <div  class=" row u-non-blurred pad_bottom_top" >
+      <div class="col-md-6 col-xs-12" id="menu_lewa" >
+          <a href="{% url 'homepage' %}">Obrotni Biało-Czerwoni</a>
+          <a href="{% url 'homepage' %}#con">Kontakt</a>
+          <a href="{% url 'miasta' %}" >Miasta</a>
+          <a href="{%  url 'haystack_search' %}">&nbsp;Wyszukiwarka</a>
+          <a href="{% url 'obcpress' %}">&nbsp;OBCpress</a>
+      </div>
+      <div class="col-md-6  col-xs-12 d-flex justify-content-end" id="menu_end">
+          {% if user.is_authenticated %}<a href="{% url 'profil' %}">Twój profil</a>{% endif %}
+          {% if user.is_anonymous %}<a href="{% url 'account_login' %}">Zaloguj się</a>{% endif %}
+          {% if user.is_authenticated %}<a href="{% url 'account_logout' %}">Wyloguj się</a>{% endif %}
+          {% if user.is_anonymous %}<a href="{% url 'account_signup' %}">Zarejestruj się</a>{% endif %}
+      </div>
+
+  </div>
+</div>
+<div id="menu_male" >
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         MENU
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ul id="dropdown">
+
+                <li> <a href="{% url 'homepage' %}">Obrotni Biało-Czerwoni</a></li>
+                <li>  <a href="{% url 'homepage' %}#con">Kontakt</a></li>
+                <li><a href="{% url 'miasta' %}" class="czerw">Miasta</a></li>
+                <li> <a href="{%  url 'haystack_search' %}">Wyszukiwarka</a></li>
+                <li><a href="{% url 'obcpress' %}">OBCpress</a></li>
+                 {% if user.is_authenticated %}<li><a href="{% url 'profil' %}" >Twój profil</a></li>{% endif %}
+                 {% if user.is_authenticated %}<li><a href="{% url 'account_login' %}" >Zaloguj się</a></li>{% endif%}
+                {% if user.is_authenticated %}<li><a href="{% url 'account_logout' %}">Wyloguj się</a></li>{% endif %}
+                 {% if user.is_anonymous %}<li><a href="{% url 'account_signup' %}">Zarejestruj się</a></li>{% endif %}
+            </ul>
+       </div>
+</div>
+
+
+</header>
+{% block postman_menu %}{% endblock %}
+
+
+{% block body  %}
+ {% endblock %}
+
+        {% block content %}
+
+       {% endblock %}
+  <footer>
+    <div class="container" id="footer">
+        <span id="linia"></span>
+        <div class="row u-non-blurred ">
+            <div class="col-md-4 ">
+                <ul class="footer_menu" id="footer_menu_lewa">
+                                   <li><a href="{% url 'miasta' %}">Miasta</a></li>
+                <li> <a href="{%  url 'haystack_search' %}" >Wyszukiwarka</a></li>
+                <li><a href="{% url 'profil' %}" >Twój profil</a></li>
+                <li><a href="{% url 'account_login' %}" >Zaloguj się</a></li>
+                <li><a href="{% url 'account_logout' %}">Wyloguj się</a></li>
+                 <li><a href="{% url 'account_signup' %}">Zarejestruj się</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="footer_menu" id="footer_menu_prawa">
+                                   <li><a href="{% url 'regulamin' %}">Regulamin portalu</a></li>
+                <li> <a href="{% url 'polityka' %}">Polityka Prywatności</a></li>
+                <li><a href="{% url 'rodo' %}">RODO</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 bialy">
+                <h6>&reg Joanna Zielonka & Martyna Franckowska</h6>
+                Znajedziesz nas na <a class="czarny" ref="https://www.facebook.com/eCafeVison">Facebooku</a><br>
+                Skontaktuj się z nami: admin@obrotni.de
+            </div>
+              <div class="dropdown">
+  <button class="btn btn-link dropdown-toggle"
+          type="button" id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          style="font-size:12px ;
+                color:#fff;
+          text-decoration:none;">
+    zdjęcia użyte w zakładce "homepage"
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="zdj">
+      Czarne ikony w "O Obrotnych Biało-Czerwonych":
+      Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a><br>
+  </div>
+</div>
+        </div>
+    </div>
+
+</footer>
+
+       
+    <!--       fooooooooooooooooooooooteeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrr-->
+    {%block js%}
+    {%endblock%}
+    {% block extra_js %}{% endblock extra_js %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+<!--   drill down menu-->
+   <script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<!--awsome icons-->
+   <script src="https://kit.fontawesome.com/8e73b16009.js" crossorigin="anonymous"></script>
+
+   </body>
+</html>
+
+
+
+

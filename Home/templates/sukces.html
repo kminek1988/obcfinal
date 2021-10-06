@@ -1,0 +1,27 @@
+
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="section_form">
+    <div class="container" id="sukces">
+    <h1>Wiadomość została wysłana pomyślnie </h1>
+
+    <h3 class="black fon700"> Odpowiemy tak szybko, jak to tylko możliwe.</h3>
+<div class="text-center red fon700" id="facebook">
+        <p>Zachęcamy również do kontaktu za pośrednictwem naszego fanpage'a na Facebooku</p>
+    <p>Kliknij w ikonkę, polub naszego fanpage'a, aby być na bieżąco. Udostępniamy tam dodatkowe treści, różne ciekwostki i informacje</p>
+
+    <a href="https://www.facebook.com/">
+        <img src="{% static 'img/facebook.png' %}">
+    </a>
+</div>
+    <div  class="text-center black, fon700" id="yt">
+        <p>Zasubskrybuj nasz kanał na Youtubie! Znajdziesz na nim podkasty, filmy instruktażowe, wywiady i inne.</p>
+        <p>Kliknij w ikonkę dzwoneczka, aby niczego nie przegapić</p>
+        <a href="https://www.youtube.com"><img src="{% static 'img/youtube.png'%}"></a>
+    </div>
+</div>
+</section>
+{% endblock %}

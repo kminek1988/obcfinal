@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block head_title %}Obc Wyloguj się{% endblock %}
+{% block logout %}
+
+
+<div class="container" id="logout_container">
+
+<div class="col-xs-12">
+<h1>Wyloguj się</h1>
+
+<p>Napewno chcesz się wylogować?</p>
+<p>Nie, to pomyłka, wracam do <a href="{% url 'profil' %}">PROFILU</a> </p>
+<form method="post" action="{% url 'account_logout' %}">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+  {% endif %}
+  <div  id="kontener_button_logout">
+  <button type="submit" id="button_logout">Wyloguj</button>
+  </div>
+</form>    
+</div>
+</div>
+{% endblock %}

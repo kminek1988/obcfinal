@@ -1,0 +1,27 @@
+    {% extends 'baza.html' %}
+    {% load static %}
+
+    {% block extra_head %}
+    {% endblock %}
+
+
+    {% block body %}
+
+    {% if messages %}
+    <div>
+
+
+        {% for message in messages %}
+        <div id="message">{{message}}</div>
+        {% endfor %}
+
+    </div>
+    {% endif %}
+
+    {% block logout %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,376 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid" id="wyszukiwarka_miast">
+    <div class="container" id="wyszukiwarka_miast_container">
+            <section id="alfabet">
+
+<div class="container, text-center">
+        <h3><strong>WYBIERZ MIASTO</strong></h3>
+        <ul id="AlfabetMenu">
+        <li><a href="#a">A</a></li>
+        <li><a href="#a">Ä</a></li>
+        <li><a href="#b">B</a></li>
+        <li><a href="#c">C</a></li>
+        <li><a href="#d">D</a></li>
+        <li><a href="#e">E</a></li>
+        <li><a href="#f">F</a></li>
+        <li><a href="#g">G</a></li>
+        <li><a href="#h">H</a></li>
+        <li><a href="#i">I</a></li>
+        <li><a href="#j">J</a></li>
+        <li><a href="#k">K</a></li>
+        <li><a href="#l">L</a></li>
+        <li><a href="#m">M</a></li>
+        <li><a href="#n">N</a></li>
+        <li><a href="#o">O</a></li>
+        <li><a href="#o">Ö</a></li>
+        <li><a href="#p">P</a></li>
+        <li><a href="#r">R</a></li>
+        <li><a href="#s">S</a></li>
+        <li><a href="#t">T</a></li>
+        <li><a href="#u">U</a></li>
+        <li><a href="#u">Ü</a></li>
+        <li><a hre+f="#w">W</a></li>
+        <li><a href="#z">Z</a></li>
+
+    </ul>
+</div>
+</section>
+<section id="a">
+        <div class="container">
+              <div class="row">
+                <h1>A</h1>
+              </div>
+              <div class="row">
+                                 {% for city in a %}
+                   <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+
+
+        <section id="ä">
+        <div class="container">
+              <div class="row">
+                <h1>Ä</h1>
+              </div>
+              <div class="row">
+                                 {% for city in aa %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+<!--BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB-->
+<section id="b">
+        <div class="container">
+              <div class="row">
+                <h1>B</h1>
+              </div>
+              <div class="row">
+                                 {% for city in b %}
+    <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+<section id="c">
+        <div class="container">
+              <div class="row">
+                <h1>C</h1>
+              </div>
+              <div class="row">
+                                 {% for city in c %}
+   <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+<!--                                               D-->
+        <section id="d">
+        <div class="container">
+              <div class="row">
+                <h1>D</h1>
+              </div>
+              <div class="row">
+                                 {% for city in d %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+<!--                                                       e-->
+        <section id="e">
+        <div class="container">
+              <div class="row">
+                <h1>E</h1>
+              </div>
+              <div class="row">
+                                 {% for city in e %}
+    <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+            
+</section>
+<section id="f">
+        <div class="container">
+              <div class="row">
+                <h1>F</h1>
+              </div>
+              <div class="row">
+                                 {% for city in f %}
+    <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+<section id="g">
+        <div class="container">
+              <div class="row">
+                <h1>G</h1>
+              </div>
+              <div class="row">
+                                 {% for city in g %}
+    <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="h">
+        <div class="container">
+              <div class="row">
+                <h1>H</h1>
+              </div>
+              <div class="row">
+                                 {% for city in h %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="i">
+        <div class="container">
+              <div class="row">
+                <h1>I</h1>
+              </div>
+              <div class="row">
+                                 {% for city in i %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="j">
+        <div class="container">
+              <div class="row">
+                <h1>J</h1>
+              </div>
+              <div class="row">
+                                 {% for city in j %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="k">
+        <div class="container">
+              <div class="row">
+                <h1>K</h1>
+              </div>
+              <div class="row">
+                                 {% for city in k %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="l">
+        <div class="container">
+              <div class="row">
+                <h1>L</h1>
+              </div>
+              <div class="row">
+                                 {% for city in l %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="m">
+        <div class="container">
+              <div class="row">
+                <h1>M</h1>
+              </div>
+              <div class="row">
+                                 {% for city in m %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="n">
+        <div class="container">
+              <div class="row">
+                <h1>N</h1>
+              </div>
+              <div class="row">
+                                 {% for city in n %}
+     <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="o">
+        <div class="container">
+              <div class="row">
+                <h1>O</h1>
+              </div>
+              <div class="row">
+                                 {% for city in o %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>              {% endfor %}
+              </div>
+        </div>
+</section>
+
+        <section id="ö">
+        <div class="container">
+              <div class="row">
+                <h1>Ö</h1>
+              </div>
+              <div class="row">
+                                 {% for city in oo %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="p">
+        <div class="container">
+              <div class="row">
+                <h1>P</h1>
+              </div>
+              <div class="row">
+                                 {% for city in p %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="r">
+        <div class="container">
+              <div class="row">
+                <h1>R</h1>
+              </div>
+              <div class="row">
+                                 {% for city in r %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="s">
+        <div class="container">
+              <div class="row">
+                <h1>S</h1>
+              </div>
+              <div class="row">
+                                 {% for city in s %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="t">
+        <div class="container">
+              <div class="row">
+                <h1>T</h1>
+              </div>
+              <div class="row">
+                                 {% for city in t %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="u">
+        <div class="container">
+              <div class="row">
+                <h1>U</h1>
+              </div>
+              <div class="row">
+                                 {% for city in u %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="ü">
+        <div class="container">
+              <div class="row">
+                <h1>Ü</h1>
+              </div>
+              <div class="row">
+                                 {% for city in uu %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="w">
+        <div class="container">
+              <div class="row">
+                <h1>O</h1>
+              </div>
+              <div class="row">
+                                 {% for city in w %}
+  <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="x">
+        <div class="container">
+              <div class="row">
+                <h1>X</h1>
+              </div>
+              <div class="row">
+                                 {% for city in x %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="y">
+        <div class="container">
+              <div class="row">
+                <h1>Y</h1>
+              </div>
+              <div class="row">
+                                 {% for city in y %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+        <section id="z">
+        <div class="container">
+              <div class="row">
+                <h1>Z</h1>
+              </div>
+              <div class="row">
+                                 {% for city in z %}
+ <div class="col-md-3" style="width:300px;"><a href="{{ city.get_absolute_url }}">{{city.title}}</a> </div>
+                      {% endfor %}
+              </div>
+        </div>
+</section>
+    </div>
+</div>
+{% endblock %}
+
+
+

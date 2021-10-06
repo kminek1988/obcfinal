@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="edycja">
+    <div class="container" id="edycja_container">
+    <div class="text-center row" id="edycja_intro">
+    <h1>{{user.username}}</h1>
+    <h3>Edytuj swój profil.</h3>
+    </div>
+        
+<div class="row" id="edycja_form">
+   
+      <div class="col-md-4">
+        <img src="{{ user.profil.profilimg.url }}" alt="Circle Image" class="img-fluid " >
+        </div>
+
+    
+      
+    
+    
+    <div class="col-md-6 offset-md-1" >
+
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+                   <div class="row padbottom">
+            {{form.typ|as_crispy_field}}
+            </div>
+                      <div class="row padbottom">
+            {{form.name|as_crispy_field}}
+            </div>
+                      <div class="row padbottom" id="profil_img">
+            {{form.profilimg|as_crispy_field}}
+<div>
+
+</div>
+
+            </div>
+                         <div class="row padbottom">
+            {{form.surname|as_crispy_field}}
+            </div>
+                      <div class="row padbottom">
+            {{ form.description|as_crispy_field }}
+            </div>
+                         <div class="row padbottom">
+            {{ form.miasto|as_crispy_field }}
+            </div>
+                           <div class="row padbottom">
+            {{ form.kod|as_crispy_field }}
+            </div>
+                           <div class="row padbottom">
+            {{ form.profesja|as_crispy_field }}
+            </div>
+                         <div class="row padbottom">
+            {{form.strona|as_crispy_field }}
+            </div>
+                         <div class="row padbottom">
+             {{ form.telefon|as_crispy_field }}
+            </div>
+            <div class="row padbottom">
+             {{ form.port1|as_crispy_field }}
+            </div>
+            <div class="row padbottom">
+             {{ form.port2|as_crispy_field }}
+            </div>       
+            <div class="row padbottom">
+             {{ form.port3|as_crispy_field }}
+            </div>
+            <div class="row padbottom">
+             {{ form.port4|as_crispy_field }}
+            </div>
+            <div class="row padbottom">
+             {{ form.port5|as_crispy_field }}
+            </div>
+                        <div class="row padbottom">
+                            <p>Ustaw status konta. Nieaktywny sprawi, że nie pojawisz się w żadnej liście na naszej stronie,</p>
+                            <p>a także, nie będziesz mógł korzystać z konta</p>
+            {{form.status|as_crispy_field}}
+            </div>
+        <div id="edycja_button">
+        <button type="submit" id="potw">POTWIERDŹ</button>
+        </div>
+       </form>   
+        
+    </div>
+        
+</div>
+</div>
+</section>
+<script>
+$('#browse').click(function(){
+    $(this).parent().find('input').click();
+});
+</script>
+{% endblock %}

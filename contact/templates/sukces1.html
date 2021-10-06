@@ -1,0 +1,22 @@
+{% extends 'baza.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="contianer-fluid d-flex justify-content-center">
+<div id="kontakt_utworzony" class="container">
+    <div class="row">
+    <h2>Twój nowy kontakt został utworzony</h2>
+    </div>
+    <div class="row text-center d-flex justify-content-center" id="kontakt_utworzony_row">
+    <div class="col-md-2" id="kontakt_utworzony_form">
+  <input type="button" value="Wróć do poszukiwań" onclick="history.back()">
+   
+    </div>
+        <div class="col-md-2" id="kontakt_utworzony_poczta">
+        <button> <a href="{% url 'postman:inbox' %}">Przejdź do poczty</a></button>  
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

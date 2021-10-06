@@ -1,0 +1,56 @@
+{% extends 'baza.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid">
+
+<div class="container" id="profi_container">
+<div class="row">
+
+    <h1>Lista osób zapisanych do:</h1>
+{% for kategoria in kategoria%}
+<h2 class="red">{{ kategoria.title }}</h2>
+
+
+    <h2>w obrębie miasta:</h2><h2 class="red"> {{kategoria.city }}</h2>
+  {% endfor%}
+   <p> <i class="fas fa-backward"></i><input type=button class="btn red " value="Wróć" onClick="javascript:history.go(-1);"> </p>
+</div>
+
+<div class="row d-flex" id="profi_row">
+
+    {% for profil in prof%}
+{% if profil.typ == "Obrotny" %}
+    <div class="col-sm-3" id="prof_col">
+
+  
+
+<div id="prof_opis">
+    <img src="{{ profil.profilimg.url }}">
+    <h5>{{ profil.user}}</h5>
+    <p>{{profil.profesja|default_if_none:"nie podano profesji"}}</p>
+    <p>{{profil.miasto|default_if_none:"nie podano miasta"}}</p>
+    <a href="{{ profil.get_absolute_url }}" id="odwiedz">ODWIEDŹ PROFIL</a>      
+</div>
+  </div>
+    {% else %}
+   <div id="prof_opis_szukajacy">
+    <img src="{{ profil.profilimg.url }}">
+    <h5>{{ profil.user}}</h5>
+    <p>{{profil.profesja|default_if_none:"nie podano profesji"}}</p>
+    <p>{{profil.miasto|default_if_none:"nie podano miasta"}}</p>
+    <a href="{{ profil.get_absolute_url }}" id="odwiedz_szukajacy">ODWIEDŹ PROFIL</a>
+</div>
+
+
+  </div>
+
+{% endif %}
+{% endfor %}
+    </div>
+</div>
+
+</div>
+
+
+{% endblock %}

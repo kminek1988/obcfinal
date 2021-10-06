@@ -1,0 +1,50 @@
+#kontakt_utworzony{
+    background-color: #fff;
+    margin: 100px 100px 100px 100px;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    font-weight: 900;
+}
+#kontakt_utworzony h2{
+    font-weight: 900;
+}
+#kontakt_utworzony_row{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#kontakt_utworzony_form{
+    width: 300px;
+
+}
+#kontakt_utworzony_form input{
+   padding-left: 20px;
+   padding-right: 20px;
+    background-color: #ee373a;
+    border: solid 1px #ee373a;
+    color: #fff;
+    font-weight: 600;
+}
+#kontakt_utworzony_poczta button {
+   padding-left: 20px;
+   padding-right: 20px;
+    background-color: #ee373a;
+    border: solid 1px #ee373a;
+    color: #fff;
+    font-weight: 600;
+}
+#kontakt_utworzony_poczta a{
+   color: #fff; 
+}
+#pole_kontaktu { 
+    font-weight:  600;
+    
+}
+#pole_kontaktu:link { 
+    font-weight:  600;
+    
+}
+#pole_kontaktu:hover { 
+    font-weight:  900;
+    color: #ee373a;
+    
+}

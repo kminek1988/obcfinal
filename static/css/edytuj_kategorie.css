@@ -1,0 +1,44 @@
+#Edytujwyszukiwarka_miast a {
+    color: #231f20;
+    font-weight: 900;
+}
+#Edytujwyszukiwarka_miast a:link {
+    color: #231f20;
+    font-weight: 900;
+}
+#Edytujwyszukiwarka_miast a:hover{
+    color: #ee373a;
+    font-weight: 900;
+}
+#Edytujwyszukiwarka_miast_container{
+    background-color: #fff;
+    padding-top: 100px;
+}
+#EdytujAlfabetMenu{
+    padding: 50px 50px 50px 50px;
+}
+ul#EdytujAlfabetMenu li{
+    display: inline;
+    
+    padding-left: 15px;
+
+}
+#EdytujAlfabetMenu a {
+          font-weight: 900;
+    color: rgb(35, 31, 32);
+    text-decoration: none;
+}
+#EdytujAlfabetMenu a:link {
+          font-weight: 900;
+    color: rgb(35, 31, 32);
+    text-decoration: none;
+}
+#EdytujAlfabetMenu a:hover {
+          font-weight: 900;
+    color: rgb(238, 55, 58);
+    text-decoration: none;
+}
+
+
+
+/*a w sekcjach*/

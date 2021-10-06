@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<section id="rejestracja_sekcja" >
+<div class="container-fluid" id="rejestracja">
+  <div class="container" id="okno_rejestracji">
+      <h2>REJESTRACJA</h2>
+
+<p>Jeżeli posiadasz już konto, to <a href="{{ login_url }}">zaloguj się</a>.</p>
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+    <p><input id="field_terms" type="checkbox" required name="terms">&nbsp;&nbsp;&nbsp; Akceptuje zasady <a href="{% url 'polityka' %}">Polityki prywatności</a>&nbsp;<a href="#">i</a>  <a href="{% url 'regulamin' %}">Regulaminu</a></p>
+<div id="rejestracja_wyslij">
+    <button type="submit" id="potwierdz">POTWIERDŹ</button>
+</div>
+</form>
+
+  </div>
+</div>
+</section>
+{% endblock %}

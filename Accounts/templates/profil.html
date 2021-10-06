@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<!--css na małe w auth_srednie.css-->
+ <section id="profil">
+{% if user.profil.black == True %}
+          <div class="container" id="nieaktywny_black">
+     <h1>Twoje konto zostało deaktywowane.</h1>
+              <p>Jeżeli nie widzisz przycisków "Edytuj Profil", "Poczta", "Kategorie", ani swojego profilu<br>
+oznacza to, że Twoje konto zostało deaktywowane w wyniku: złamania regulaminu lub prawa <br>
+Po więcej informacji napisz na faq@obrotni.de </p>
+
+     </div>
+{% else %}
+
+<!--powitanie użytkownika-->
+     <div class="container" id="powitanie">
+                           <div class="col-xs-12" id="profil_menu_male">
+            <a href="{% url 'edycja' %}" id="edytuj_a"><span class="poczta_odstep"><button id="edytuj"><i class="fas fa-user-edit"></i> </button></span></a>
+             <a href="{% url 'postman:inbox' %}"><button id="poczta_a"> <i class="far fa-envelope"></i></button></a>
+             <a href="{% url 'miasto_edit' %}"><span id="profil_kat_span_a"><button id="profil_kat_a"> <i class="far fa-heart"></i></button></span></a>
+        </div>
+<div id="witaj" class="row">
+            <h1>Witaj {{ user.username }} w edytorze profilu</h1>
+     <h3>DOPRACUJ SWÓJ PROFIL! ŚWIAT CHCE CIĘ POZNAĆ! </h3>
+         </div>
+     </div>
+  
+ 
+<!--  koniec powitania    -->
+<!--Menu-->
+     
+     <div class="container" >
+         
+         <div class="col-md-8 offset-md-4" id="profil_menu">
+             <span class="poczta_odstep"><button id="edytuj"><a href="{% url 'edycja' %}" id="edytuj"><i class="fas fa-user-edit"></i> EDYTUJ PROFIL</a> </button></span>
+             <button id="poczta"><i class="far fa-envelope"></i> <a href="{% url 'postman:inbox' %}">POCZTA</a></button>
+             <span id="profil_kat_span"><button id="profil_kat"><a href="{% url 'miasto_edit' %}"> <i class="far fa-heart"></i> KATEGORIE</a></button></span>
+        </div>
+         
+
+                   {% if user.profil.status == "Nieaktywny" %}
+     <div class="container" id="nieaktywny">
+     <h1>Twoje konto zostało deaktywowane.</h1>
+            <p> W tej chwili twoje konto nie wyświetla się ani na listach, ani w wynikach wyszukiwania.</p>
+         <p>Zachowamy je dla Ciebie na okres min. 5 lat od daty deaktywacji. </p>
+     <p>Zapraszamy jak tylko zmienisz zdanie. Wystarczy, że zmienisz status na "Aktywny" </p>
+     </div>
+     {% else %}
+         </div>
+   
+  
+<!--     koniec Menu-->
+
+     
+     
+<!--     srodek     -->
+    <div class="container" id="srodek">
+<div class="row">
+    <div class="col-md-4 " id="profilimg">                  
+        <img src="{{ user.profil.profilimg.url }}" id="zdjecieProfilowe" class="rounded-circle">
+	                
+                    </div>
+
+                    
+<!--dane osobowe                    -->
+    <div class="col-md-7" id="dane">
+             
+               <ul id="dane_osobowe">
+                                 <li><h2>{{user.profil.name|default_if_none:""}}&nbsp;{{ user.profil.surname|default_if_none:"" }}</h2></li>
+                                 <li><i class="fas fa-map-marker-alt"></i>{{user.profil.miasto|default_if_none:""}}  {{ user.profil.kod|default_if_none:""}}</li>
+                                 <li> <i class="far fa-heart"></i>{{ user.profil.profesja|default_if_none:""}}</li>
+                   <li><i class="far fa-arrow-alt-circle-right"></i>{{ user.profil.kategoria|default_if_none:"" }}</li>
+                   <li><i class="far fa-envelope"></i>{{ user.profil.user.email|default_if_none:"" }}</li>
+                   <li><i class="fas fa-phone-alt"></i>{{ user.profil.telefon|default_if_none:"" }}</li>
+                   <li><i class="fas fa-globe"></i>{{ user.profil.strona|default_if_none:"" }}</li>
+                   <li><i class="fas fa-globe"></i>{{ user.profil.typ|default_if_none:"" }}</li>
+
+                              
+
+                             </ul>
+
+              
+
+      </div>
+</div>
+<!--                    koniec danych osobowych-->
+<!--        początek perspektywy -->
+<div class="row" id="opis_row">
+    <div  id="opis" class="col-md-12">
+    <h2>TWÓJ OPIS</h2>
+ <p id="opis_p">{{ user.profil.description|default_if_none:"" }} </p>
+    </div>    
+</div>
+<!--        koniec perspectywy -->
+</div>
+<!--koniec środka-->
+
+<!--portfolio-->
+      
+ <div class="container-fluid " id="galeria">
+        <div class="row" id="twoja_galeria">
+          <h2>TWOJA GALERIA</h2>
+     </div>
+     <div class="row" id="zdj_galeria">
+    
+         
+
+<div class="col-md-2 offset-md-1 ">
+<a class="lightbox" href="#1">
+<img src="{{ user.profil.port1.url }}" class="zdj">    
+</a>
+         </div>
+         
+<div class="col-md-2">
+    <a class="lightbox" href="#2">
+        <img src="{{ user.profil.port2.url }}" class="zdj"></a>
+         </div>
+         
+<div class=" col-md-2">
+    <a class="lightbox" href="#3">
+        <img src="{{ user.profil.port3.url }}" class="zdj"></a>
+         </div>
+         
+<div class="col-md-2">
+    <a class="lightbox" href="#4">
+        <img src="{{ user.profil.port4.url }}" class="zdj"></a>
+         </div>
+         
+<div class="col-md-2">
+    <a class="lightbox" href="#5">
+        <img src="{{ user.profil.port5.url }}" class="zdj"></a>
+         </div>
+     </div>
+ </div>
+
+     
+     
+ </section>
+
+
+<!--lightbox target-->
+<div class="lightbox-target" id="1">
+<img src="{{ user.profil.port1.url }}">  
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="2">
+<img src="{{ user.profil.port2.url }}">  
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="3">
+<img src="{{ user.profil.port3.url }}">  
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="4">
+<img src="{{ user.profil.port4.url }}">  
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="5">
+<img src="{{ user.profil.port5.url }}">  
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+
+
+{% endif %}
+{% endif %}
+
+
+{% endblock %}

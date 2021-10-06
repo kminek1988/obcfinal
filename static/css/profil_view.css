@@ -1,0 +1,78 @@
+#profil_view{
+    background-color: #fff;
+}
+
+#prof_user{
+text-align: center;
+padding: 50px 0px 50px 0px; 
+}
+#prof_user h1{
+    font-weight: 900;
+    color: #ee373a;
+}
+#prof_zdj{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+#prof_dane{
+    background-color: #eff4f5;
+    padding: 50px 50px 50px 50px;
+}
+#prof_dane_osobowe{
+    list-style: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#prof_dane_osobowe i{
+    padding-right: 20px;
+    color: #ee373a;
+}
+#prof_opis_row{
+    padding: 50px 50px 50px 50px;
+    font-weight: 700;
+}
+#prof_opis_row h3{
+    color: #ee373a;
+    font-weight: 900;
+}
+#prof_nowy_kontakt{
+    padding-top: 50px;
+}
+#nowy_kontakt{
+ 
+    width: 200px;
+    text-align: center;
+    background-color: #ee373a;
+}
+#nowy_kontakt img{
+    width: 40px;
+    height: 40px;
+}
+#nowy_kontakt a{
+    color: #fff;
+    font-weight: 600;
+}
+#nowy_kontakt_dropdown{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 10px 10px 10px;
+}
+#prof_save_button{
+    padding-top: 20px;
+}
+#prof_save_button button{
+    background-color: #231f20;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px #231f20;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#prof_opis_szukajacy {
+    display: none;
+}

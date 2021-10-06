@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+
+<!-- ======= Intro Section ======= -->
+  <section id="intro" >
+
+    <div class="intro-text">
+    <div class="container-fluid">
+                <div class="row">
+            <div class="col-md-5 offset-md-2 col-xs-12 text-center" id="intro_lewa">
+                <h1>Witaj na portalu</h1>
+                <h1><strong>OBROTNI BIAŁO-CZERWONI</strong></h1>
+                <table class="table">
+                    <tr>
+      <td><p style="font-size:25px;">INFORMACJE</p></td>
+        <td style="padding-top:20px;"><span class="dot"></span></td>
+      <td><p style="font-size:25px;">POMOC</p></td>
+        <td style="padding-top:20px;"><span class="dot"></span></td>
+        <td><p style="font-size:25px;">SERWIS</p></td>
+        <td style="padding-top:20px;"><span class="dot"></span></td>
+      <td><p style="font-size:25px;">ZNAJOMOŚCI</p></td>
+    </tr>
+</table>
+
+
+<div class="row">
+    <h4>Jest już <span id="ile">{{ ile }}</span> Obrotnych Biało-Czerwonych</h4>
+</div>
+            </div>
+
+                    
+                    
+<!--                    srednie -->
+                    <div class="col-md-5 offset-md-2 col-xs-12 text-center" id="intro_lewa_srednie">
+                <h1 class="red fon700">Witaj na portalu</h1>
+                <h1><strong>OBROTNI BIAŁO-CZERWONI</strong></h1>
+                <table class="table">
+                    <tr>
+      <td><p style="font-size:15px;">INFORMACJE</p></td>
+       
+      <td><p style="font-size:15px;">POMOC</p></td>
+     
+        <td><p style="font-size:15px;">SERWIS</p></td>
+       
+      <td><p style="font-size:15px;">ZNAJOMOŚCI</p></td>
+    </tr>
+</table>
+
+
+<div class="row">
+    <h4>Jest już <span id="ile_srednie">{{ ile }}</span> Obrotnych Biało-Czerwonych</h4>
+</div>
+            </div>
+                                    <div class="col-md-5 text-center"  id="logo_intro">
+
+  <img src="{% static 'img/logo.png'%}" class="rounded-circle img-responsive">
+
+
+
+        </div>
+
+                <div class="col-md-5 text-center"  id="logo_intro_srednie">
+
+  <img src="{% static 'img/logo.png'%}" style="background-color: #fff; width: 200px; height: 200px;" class="rounded-circle">
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+      </div>
+
+
+
+
+  </section><!-- End Intro Section -->
+
+<section id="aktualnosci">
+<div class="container">
+        <h1>Aktualności </h1>
+{% include 'aktualny.html' %}
+</div>
+</section>
+<section id="about">
+    <div class="container">
+        <h1 >O Obrotnych Biało-Czerwonych</h1>
+       <div class="row flex-nowrap" id="infoSerwis">
+           <div class="col-md-2"><img src="{% static 'img/i.png'%}" style="height:200px; width:200px;"></div>
+                   <div class="col-md-4 infoSerwisOffset-md-2">
+               <h2>INFORMACJE</h2>
+               <p>Najlepsze dostępne narzędzie: INFORMACJE!
+                   Dzięki nim wszystko niemalże staje się prostsze.
+                   Ważne jest jednak to, by były one rzetelnie pozyskane i przedstawione
+                   w możliwie przystępnej formie. Na OBC znajdziecie zakładkę Prasówka,
+                   w której będziemy dla was tłumaczyć ważne artykuły niemieckich gazet,  opisywać tematy, które dotyczą wszystkich
+                   nas (jak pozyskać Kindergeld, jaki jest system podatkowy w Niemczech itd).
+                   Znajdą się tu również felietony o życiu w De czy o podróżach po tym kraju.
+                   Właściwie ogranicza nas tylko nasza i wasza wyobraźnia, dlatego Prasówka będzie 
+                   z czasem się rozwijać, a wszelkie wasze pomysły napiszcie nam w  wiadomości na
+                    <a class="black fon700" style="text-decoration: none;" href="https://www.facebook.com/eCafeVison">Facebooku.</a></p>
+           </div>
+
+                      <div class="col-4 ">
+               <h2>SERWIS</h2>
+               <p>Portal przeznaczony jest zarówno dla osób poszukujących jak i proponujących usługi. Niezależnie od tego,
+                   czy zajmujesz się czymś hobbistycznie, czy zawodowo,
+                   czy dodatkowo, czy na pełen etat. Stwórz konto na OBC
+                   i opisz się. W praktyce zyskasz wizytówkę internetową,
+                   którą można posłużyć się do promocji swoje działalności.
+                   Jeżeli chcesz, aby zainteresowani Cię odnaleźli, wejdź w zakładkę
+                   "Zarejestruj się". Jeśli szukasz to OBC daje ci do dyspozycji bazę
+                   aktywnych i chętnych do pracy Obrotnych Biało-Czerwonych. Wejdź w zakładkę
+                   "Miasta", odnajdź swoje miasto i kategorię, która Cię interesuje.
+                   W ten sposób stworzymy naszą siatkę kontaktów zawodowych, przyznaj:
+                   To jest potrzebne!</p>
+           </div>
+           <div class="col-2"><img src="{% static 'img/serwis.png'%}" style="height:200px; width:200px;"></div>
+
+       </div>
+
+               <div class="row" id="infoSerwis2">
+                   <div class="col-2"><img src="{% static 'img/help.png'%}" style="height:200px; width:200px;"></div>
+           <div class="col-4 infoSerwisOffset-md-2">
+               <h2>POMOC</h2>
+Rzetelne informacje i serwis to już ogromna pomoc dla wszystkich,
+               którzy borykają się jeszcze z barierą językową,
+               czy uczuciem wyalienowania. Portal pomoże Ci jeszcze z tym się uporać.
+               Znajdziesz tu wszelkie kursy językowe, pomoc psychologiczną,
+               kursy zawodowe, porady prawne, promocje, imprezy dedykowane Polonii
+               ,  koncerty, spotkania towarzyskie. Dzięki OBC z łatwością odnajdziesz
+               się w nowej rzeczywistości i o to właśnie chodzi!
+               Stwórzmy społeczność prawdziwie obrotną, chcącą czegoś więcej
+               od emigracji niż tylko praca-dom, dom- praca. Zawalczmy razem z
+               zagubieniem, wyalienowaniem, nostalgią, dezinformacją.</p>
+           </div>
+
+                      <div class="col-4 infoSerwisCol">
+               <h2>ZNAJOMOŚCI</h2>
+               <p>Grasz w szachy i nie masz z kim pograć? Marzysz o Jam Session,
+                   lub ognisku przy dźwiękach gitary? Jesteś Fotografem, ale
+                   samemu tak smutno w te plenery chodzić? I tak można wymieniać.
+                   Rozwiązanie jest proste!
+Załóż konto na OBC i znajdź ludzi tak pozytywnie zakręconych jak Ty!
+                   Nie daj się nudzie, ani samotności.
+Dodatkowo, gdy portal będzie już odpowiednich rozmiarów,
+                   zajmiemy się organizacją różnych imprez,
+                   na które wstęp będą mieli członkowie Obrotnych Biało- Czerwonych
+                   (jeszcze niech ten świrus pójdzie w cholerę...)
+Jeżeli masz pomysł, chciałbyś z nami współpracować,
+                   coś doradzić polub nas na Facebooku!</p>
+           </div>
+                   <div class="col-2"><img src="{% static 'img/people.png' %}" style="height:200px; width:200px;"></div>
+       </div>
+   
+</section>
+
+<section id="aktualnosci_srednie">
+<div class="container">
+        <h1>Aktualności </h1>
+{% include 'aktualny.html' %}
+</div>
+</section>
+<section id="about_srednie" class="ice">
+    <div class="container">
+        <h2 class="red text-center fon700 ">O Obrotnych<br> Biało-Czerwonych</h2>
+       <div class="row" id="infoSerwis_srednie">
+           <div class="col-md-2" id="infoSerwis_srednie_col"><img src="{% static 'img/i.png'%}" style="height:200px; width:200px;"></div>
+                   <div class="col-md-4 infoSerwisOffset-md-2">
+               <h2>INFORMACJE</h2>
+               <p class="pad_bottom_50">Najlepsze dostępne narzędzie: INFORMACJE!
+                   Dzięki nim wszystko niemalże staje się prostsze.
+                   Ważne jest jednak to, by były one rzetelnie pozyskane i przedstawione
+                   w możliwie przystępnej formie. Na OBC znajdziecie zakładkę Prasówka,
+                   w której będziemy dla was tłumaczyć ważne artykuły niemieckich gazet,  opisywać tematy, które dotyczą wszystkich
+                   nas (jak pozyskać Kindergeld, jaki jest system podatkowy w Niemczech itd).
+                   Znajdą się tu również felietony o życiu w De czy o podróżach po tym kraju.
+                   Właściwie ogranicza nas tylko nasza i wasza wyobraźnia, dlatego Prasówka będzie 
+                   z czasem się rozwijać, a wszelkie wasze pomysły napiszcie nam w  wiadomości na
+                    <a class="black fon700" style="text-decoration: none;" href="https://www.facebook.com/eCafeVison">Facebooku.</a></p>
+           </div>
+        <div class="col-md-2 pad_bottom_20" id="infoSerwis_srednie_col2"><img src="{% static 'img/serwis.png'%}" style="height:200px; width:200px;"></div>
+                      <div class="col-md-4 ">
+               <h2 class="red fon700">SERWIS</h2>
+               <p class="fon700">Portal przeznaczony jest zarówno dla osób poszukujących jak i proponujących usługi. Niezależnie od tego,
+                   czy zajmujesz się czymś hobbistycznie, czy zawodowo,
+                   czy dodatkowo, czy na pełen etat. Stwórz konto na OBC
+                   i opisz się. W praktyce zyskasz wizytówkę internetową,
+                   którą można posłużyć się do promocji swoje działalności.
+                   Jeżeli chcesz, aby zainteresowani Cię odnaleźli, wejdź w zakładkę
+                   "Zarejestruj się". Jeśli szukasz to OBC daje ci do dyspozycji bazę
+                   aktywnych i chętnych do pracy Obrotnych Biało-Czerwonych. Wejdź w zakładkę
+                   "Miasta", odnajdź swoje miasto i kategorię, która Cię interesuje.
+                   W ten sposób stworzymy naszą siatkę kontaktów zawodowych, przyznaj:
+                   To jest potrzebne!</p>
+           </div>
+   
+
+       </div>
+
+               <div class="row" id="infoSerwis2_srednie">
+                   <div class="col-md-2 pad_bottom_50 text-center"><img src="{% static 'img/help.png'%}" style="height:200px; width:200px;"></div>
+           <div class="col-md-4 infoSerwisOffset-md-2 pad_bottom_20">
+               <h2 class="text-center fon700">POMOC</h2>
+Rzetelne informacje i serwis to już ogromna pomoc dla wszystkich,
+               którzy borykają się jeszcze z barierą językową,
+               czy uczuciem wyalienowania. Portal pomoże Ci jeszcze z tym się uporać.
+               Znajdziesz tu wszelkie kursy językowe, pomoc psychologiczną,
+               kursy zawodowe, porady prawne, promocje, imprezy dedykowane Polonii
+               ,  koncerty, spotkania towarzyskie. Dzięki OBC z łatwością odnajdziesz
+               się w nowej rzeczywistości i o to właśnie chodzi!
+               Stwórzmy społeczność prawdziwie obrotną, chcącą czegoś więcej
+               od emigracji niż tylko praca-dom, dom- praca. Zawalczmy razem z
+               zagubieniem, wyalienowaniem, nostalgią, dezinformacją.</p>
+           </div>
+         <div class="col-md-2 pad_bottom_20 text-center"><img src="{% static 'img/people.png' %}" style="height:200px; width:200px;"></div>
+
+                      <div class="col-md-4 infoSerwisCol">
+               <h2 class="text-center fon700">ZNAJOMOŚCI</h2>
+               <p>Grasz w szachy i nie masz z kim pograć? Marzysz o Jam Session,
+                   lub ognisku przy dźwiękach gitary? Jesteś Fotografem, ale
+                   samemu tak smutno w te plenery chodzić? I tak można wymieniać.
+                   Rozwiązanie jest proste!
+Załóż konto na OBC i znajdź ludzi tak pozytywnie zakręconych jak Ty!
+                   Nie daj się nudzie, ani samotności.
+Dodatkowo, gdy portal będzie już odpowiednich rozmiarów,
+                   zajmiemy się organizacją różnych imprez,
+                   na które wstęp będą mieli członkowie Obrotnych Biało- Czerwonych
+                   (jeszcze niech ten świrus pójdzie w cholerę...)
+Jeżeli masz pomysł, chciałbyś z nami współpracować,
+                   coś doradzić polub nas na Facebooku!</p>
+           </div>
+                  
+       </div>
+   
+</section>
+<!--koniec o projekcie-->
+
+<section id="video">
+    <div class="container-fluid">
+          <div class="container">
+
+        <h1>Instrukcja</h1>
+              <h2>Zobacz jak korzystać z portalu Obrotni Biało-Czerwoni </h2>
+
+
+            <div class="box wow fadeInRight" id="wideo_intro">
+        <iframe width="100%" height="800" src="https://www.youtube.com/embed/B5FrEFHXMZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+    </div>
+</section>
+<!--==========================>kontakt=====================-->
+<section id="con">
+    <div class="container-fluid">
+        <div class="row" id="conrow">
+            <div class="col-md-3">
+               
+            </div>
+            <div class="col-md-6 align-items-md-center">
+                <h2 class="fon700">Skontaktuj się z nami!</h2>
+                <p>Jeżeli chcesz nam wysłać maila tradycyjnie na adres admin@obrotni.de  lub faq@obrotni.de prosimy dopisz w temacie:
+                </p> <ul>
+                    <li>Problemy Techniczne: jeżeli Cię spotkały i potrzebujesz wsparcia technicznego</li>
+                <li> Współpraca: jeżeli czujesz, że możesz być częścią projektu</li>
+                <li>Reklama: jeżeli chcesz, byśmy promowali twoją działalność</li>
+                <li>Inne: czyli inne</li>
+                </ul>
+<p class="red">Aby zaoszczędzić czas skorzystaj z <a href="{% url 'kontakt' %}">FORMULARZA KONTAKTOWEGO</a></p>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</section>
+<script>
+
+</script>
+{% endblock %}

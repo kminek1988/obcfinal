@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section id="obcpress_sekcja">
+    <div class="container" id="obcpress_container" >
+        <div class="row" id="obc_intro">
+            <h1>ObcPress</h1>
+            <div class="col-md-8">
+                
+                <p> wstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwst
+                    ępwstępwstępwstępwstępwstępwst
+                    ępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwstępwst
+                    ępwstępwstępwstępwstępwstępwstępwstępwstępwstęp</p>
+            </div>
+            <div class="col-md-4">
+                <p>drugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstępdrugi wstęp</p>
+            </div>
+        </div>
+        <div class="row" id="obcpress_art">
+            {% for articles in art %}
+            <h3>{{ articles.title }}</h3>
+            <div class="col-md-4">
+                <img src="{%static 'img/logo.png' %}" style="width:300px;">
+            </div>
+            <div class="col-md-8" >
+                <p>{{articles.paragraf1 }}</p>
+                <p>{{articles.paragraf2}}</p>
+                <p>{{articles.paragraf3}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

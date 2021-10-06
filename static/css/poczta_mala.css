@@ -1,0 +1,56 @@
+@media only screen and (max-width: 800px) {
+    #postman_menu{
+        display: none;
+    }
+    #postman_menu_male{
+         background-color: rgba(255, 255, 255, 0.5);
+        padding-left: 10px;
+    }
+      #postman_menu_male a{
+        color: #ee373a;
+        padding-left: 10px;
+          font-weight: 500;
+    }
+          #postman_menu_male a:link{
+        color: #ee373a;
+        padding-left: 10px;
+          font-weight: 500;
+    }
+          #postman_menu_male a:hover{
+        color: #231f20;
+        padding-left: 10px;
+          font-weight: 500;
+    }
+    #postman_write_base{
+        width: 300px;
+    }
+    #okno_wiadomosci form{
+        width: 300px;
+       left: 0px;
+    }
+     #okno_wiadomosci{
+        width: 400px;
+         margin: auto;
+          padding: 50px 0px 10px 20px;
+    }
+    #button_postman{
+        text-align: center;
+        padding: 20px 0px 0px 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 801px) {
+   
+    #profil_menu_male {
+        display: none;
+    }
+}

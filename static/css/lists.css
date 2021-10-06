@@ -1,0 +1,58 @@
+#wyszukiwarka_miast h1{
+ font-weight: 900; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#wyszukiwarka_miast a {
+    color: #ee373a;
+    font-weight: 900;
+}
+#wyszukiwarka_miast a:link {
+    color: #ee373a;
+    font-weight: 900;
+}
+#wyszukiwarka_miast a:hover {
+    color: #231f20;
+    font-weight: 900;
+    
+}
+
+#wyszukiwarka_miast_container{
+    background-color: #fff;
+    padding-top: 100px;
+}
+#AlfabetMenu{
+    padding: 50px 50px 50px 50px;
+}
+ul#AlfabetMenu li{
+    display: inline;
+    
+    padding-left: 15px;
+
+}
+#AlfabetMenu a {
+          font-weight: 1000;
+    color: rgb(35, 31, 32);
+    text-decoration: none;
+}
+#AlfabetMenu a:link {
+          font-weight: 1000;
+    color: rgb(35, 31, 32);
+    text-decoration: none;
+}
+#AlfabetMenu a:hover {
+          font-weight: 1000;
+    color: rgb(238, 55, 58);
+    text-decoration: none;
+}
+.flexwrap{
+columns: 3 auto;
+    text-align: left;
+    list-style: none;
+}
+.flexwrapli{
+    flex: 1 0 33.33%;
+}
+#a h1{
+    
+}

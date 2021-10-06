@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="login">
+<div class="container" id="login_container">
+
+            
+  <h4>Logowanie</h4>
+              <form method="post" action="">
+            {% csrf_token %}
+{{ form|crispy }}
+
+            <div id="kontener_button">
+              <button  id="button_zaloguj" type="submit"><a href="{% url 'profil' %}" >Zaloguj się</a></button>
+            </div>
+            </form>
+      
+           <a id="password_reset" href="{% url 'password_reset' %}" >Hasło wyleciało Ci z głowy? Zresetuj je</a>
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}
+

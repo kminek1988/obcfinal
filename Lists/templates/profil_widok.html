@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+ <section id="profil_view">
+<!--powitanie użytkownika-->
+     
+<div id="prof_nowy_kontakt" class="container">
+  {% if user.is_authenticated %}
+<div class="nav-item dropdown nonestyle" id="nowy_kontakt">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <img src="{% static 'img/ikonka1.png' %}" >Nowy Kontakt
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="nowy_kontakt_dropdown">
+  <section id="Nowy_Kontakt_include">
+{% include 'ContactForm.html' %}
+  </section>
+{% if messages %}
+ <ul class="messages">
+ {% for message in messages %}
+  <li class="{{ message.tags }}">{{ message }}</li>
+ {% endfor %}
+  </ul> {% endif %}
+        </div>
+
+</div>
+{% else %}
+   <p>*Aby dodać Obrotnego do kontaktów musisz być zalogowany</p>
+  {% endif %}     
+</div>
+
+<!--  koniec powitania    -->
+<!--     srodek     -->
+    <div class="container" id="prof_srodek">
+
+<div class="row">
+    <div class="row" id="prof_user">
+    <h1>{{ profil.user }}</h1>
+    </div>
+    <div class="col-md-4" id="prof_view_img">
+        <img src="{{ profil.profilimg.url }}" alt="Circle Image" class="rounded-circle" id="prof_zdj">
+
+                    </div>
+
+<!--dane osobowe                    -->
+    <div class="col-md-6" id="prof_dane">
+
+               <ul id="prof_dane_osobowe">
+                         <li><h2>{{profil.name|default_if_none:""}}&nbsp;{{ profil.surname|default_if_none:"" }}</h2></li>
+                                 <li><i class="fas fa-map-marker-alt"></i>{{ profil.miasto|default_if_none:""}}  {{ profil.kod|default_if_none:""}}</li>
+                                 <li> <i class="far fa-heart"></i>{{ profil.profesja|default_if_none:""}}</li>
+                   <li><i class="far fa-arrow-alt-circle-right"></i>{{ profil.kategoria|default_if_none:"" }}</li>
+                   <li><i class="far fa-envelope"></i>{{ profil.user.email|default_if_none:"" }}</li>
+                   <li><i class="fas fa-phone-alt"></i>{{ profil.telefon|default_if_none:"" }}</li>
+                   <li><i class="fas fa-globe"></i><a href="https://{{ user.profil.strona|default_if_none:'#' }}">{{ profil.strona|default_if_none:"" }}</a> </li>
+
+
+                             </ul>
+  <div class="row" id="prof_opis_row">
+      <h3>Opis</h3>
+        <p>{{ profil.description }}</p>
+</div>
+
+
+
+      </div>
+</div>
+<!--                    koniec danych osobowych-->
+
+</div>
+   
+     <!--portfolio-->
+    <div class="container-fluid " id="galeria">
+        <div class="row" id="twoja_galeria">
+          <h2>GALERIA</h2>
+     </div>
+     <div class="row" id="zdj_galeria">
+
+
+
+<div class="col-md-2 offset-md-1 ">
+<a class="lightbox" href="#1">
+<img src="{{ profil.port1.url }}" class="zdj">
+</a>
+         </div>
+
+<div class="col-md-2">
+    <a class="lightbox" href="#2">
+        <img src="{{ profil.port2.url }}" class="zdj"></a>
+         </div>
+
+<div class=" col-md-2">
+    <a class="lightbox" href="#3">
+        <img src="{{ profil.port3.url }}" class="zdj"></a>
+         </div>
+
+<div class="col-md-2">
+    <a class="lightbox" href="#4">
+        <img src="{{ profil.port4.url }}" class="zdj"></a>
+         </div>
+
+<div class="col-md-2">
+    <a class="lightbox" href="#5">
+        <img src="{{ profil.port5.url }}" class="zdj"></a>
+         </div>
+     </div>
+ </div>
+<!--lightbox target-->
+<div class="lightbox-target" id="1">
+<img src="{{ profil.port1.url }}">
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="2">
+<img src="{{ profil.port2.url }}">
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="3">
+<img src="{{ profil.port3.url }}">
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="4">
+<img src="{{ profil.port4.url }}">
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+<div class="lightbox-target" id="5">
+<img src="{{ profil.port5.url }}">
+   <a class="lightbox-close" href="#"></a>
+</div>
+
+
+
+
+ </section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

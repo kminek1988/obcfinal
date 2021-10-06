@@ -1,0 +1,90 @@
+@media only screen and (max-width: 800px) {
+    #login_container{
+        width: 100%;
+    }
+    #kontener_button{
+        text-align: center;
+        padding-left: 0px;
+    }
+    #niepamieta {
+        color: #231f20;
+    }
+/*profil.html*/
+    #profil_menu{
+        display: none;
+    }
+    #profil_menu_male button{
+        padding: 5px 15px 5px 15px;
+        position: fixed;
+        z-index: 1;
+    }
+    #profilimg{
+        text-align: center;
+    }
+    #zdjecieProfilowe{
+        max-width: 300px;
+        max-height: 300px;
+        position: relative;
+        z-index: 0;
+    }
+    #dane_osobowe{
+        padding-left: 5px;
+        margin: auto;
+        font-size: 20px;
+    }
+    #dane{
+        font-size: 1.2em;
+        padding: 20px 0px 0px 10px;
+    }
+     #dane i{
+    padding-left: 0px;
+    }
+ #opis {
+    width: 100%;
+    background-color: #EFF4F5;
+    margin-top: 50px;
+       padding: 0px 0px 0px 20px;
+}
+    #opis p {
+    font-weight: 100;
+        font-size: 1em;
+}
+#logout_container {
+
+height: 300px;
+width: 300px;
+margin-top:10px;
+margin-bottom: 10px;
+background-color: #eff4f5;
+padding: 20px 10px 10px 10px;
+text-align: center;
+font-weight: 700;
+}
+    #logout_container a{
+        color: #ee373a;
+        
+    }
+        #logout_container a:link{
+        color: #ee373a;
+        
+    }
+        #logout_container a:hover{
+        color: #231f20;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 801px) {
+   
+    #profil_menu_male {
+        display: none;
+    }
+}

@@ -1,0 +1,211 @@
+#login_container{
+background-color: #eff4f5;
+    color: #707070;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px 50px 50px;
+
+    width: 600px;
+}
+
+#login_container h4{
+padding-top: 25px;
+    padding-left: 20px;
+}
+#login_container form{
+    padding:30px 30px 30px 30px;
+    
+}
+#login_container label{
+   color: #707070; 
+    font-weight: 100;
+    padding: 10px 0px 10px 0px;
+}
+#button_zaloguj{
+    width: 200px;
+    background-color: #231f20;
+    border: solid #231f20;
+    color: #fff;
+    font-weight: 500;
+
+}
+#kontener_button a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+#kontener_button a:link {
+    color: #ffff;
+    text-decoration: none;
+}
+#kontener_button a:hover {
+    color: #eff4f5;
+    text-decoration: none;
+}
+
+#kontener_button {
+    padding-left: 33%;
+    padding-bottom: 25px;
+    padding-top: 50px;
+}
+
+#password_reset{
+    text-decoration: none;
+    background-color: #eff4f5;
+    color: #231f20;
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px 50px 50px;
+    font-weight: 700;
+
+}
+#password_reset h1{
+color: #ee373a;
+font-weight: 900;
+padding-bottom: 20px;
+}
+#password_reset_input {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+#password_reset_input input{
+padding: 0px 50px 0px 50px;
+background-color: #ee373a;
+color: #fff;
+font-weight: 700;
+border: solid 1px #ee373a;
+}
+#password_reset_done{
+    text-decoration: none;
+    background-color: #eff4f5;
+
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px 50px 50px;
+
+
+}
+
+#password_reset_done p{
+padding-top: 50px;
+    font-weight: 700;
+      color: #231f20;
+}
+#password_reset_from_key{
+    text-decoration: none;
+    background-color: #eff4f5;
+    color: #231f20;
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px 50px 50px;
+    font-weight: 700;
+    }
+
+#password_reset_from_key_final{
+    text-decoration: none;
+    background-color: #eff4f5;
+
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px 50px 50px;
+}
+
+
+#logout_container {
+
+height: 300px;
+width: 600px;
+margin-top:100px;
+margin-bottom: 100px;
+background-color: #eff4f5;
+padding: 50px 50px 50px 50px;
+text-align: center;
+font-weight: 700;
+}
+#button_logout{
+padding: 0px 50px 0px 50px;
+background-color: #231F20;
+color: #fff;
+border: solid 1px #231f20;
+}
+
+/*rejestracja */
+#rejestracja_sekcja {
+     background-color: #fff;
+}
+#rejestracja {
+padding-top: 100px;
+padding-bottom: 50px;
+}
+#okno_rejestracji {
+    background-color: #eff4f5;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 50%;
+}
+#okno_rejestracji h2{
+    font-weight: 700;
+    
+}
+#okno_rejestracji p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#okno_rejestracji a{
+    color: #707070;
+    text-decoration: none;
+}
+#okno_rejestracji a:link{
+    color: #707070;
+    text-decoration: none;
+}
+#okno_rejestracji label {
+    color: #707070;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#przycisk{
+    width: 100%;
+        margin-left: 35%;
+    margin-right: 75%;
+   
+}
+#potwierdz{
+   background-color: #231F20;
+    color: #fff;
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+    border: solid #231F20;
+    width: 200px;
+}
+#field_terms{
+    padding-right: 20px;
+}
+#okno_rejestracji a:hover{
+    color: #ee373a;
+    text-decoration: none;
+}
+/*############################przejdz do swojej poczty */
+#confirm {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 600px;
+    width: 800px;
+    background-color: #eff4f5;
+    padding: 10% 5% 15% 5%;
+}
+
+/*#############LOOOOOOOOOOOOOOGIN #########################*/
+#message {
+background-color: #fff;
+font-weight: bold;
+text-align: center;
+}

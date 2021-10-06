@@ -1,0 +1,27 @@
+.dokumenty {
+background-image: url(../img/sciana.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#polityka{
+background-color: #fff;
+padding: 90px 90px 90px 90px;
+
+
+}
+#polityka a {
+color: rgb(238, 55, 58);
+text-decoration: none;
+}
+#polityka a:link {
+color: rgb(238, 55, 58);
+text-decoration: none;
+}
+#polityka a:hover {
+color: rgb(70, 70, 70);
+font-weight: bold;
+text-decoration: none;
+
+}

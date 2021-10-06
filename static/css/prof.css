@@ -1,0 +1,36 @@
+#profi_container{
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#profi_container h1 {
+    text-align: center;
+    font-weight: 900;
+}
+#profi_container h2{
+    text-align: center;
+    font-weight: 900;
+}
+#profi_row{
+    display: inline-block;
+}
+
+#prof_opis{
+    text-align: center;
+    font-weight: 900;
+    
+    
+}
+ #prof_opis img{
+   width:150px; 
+}
+#odwiedz{
+    color: #ee373a;
+}
+#odwiedz:link{
+    color: #ee373a;
+}
+#odwiedz:hover{
+    color: #464646;
+}

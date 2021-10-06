@@ -1,0 +1,50 @@
+#section_form{
+ background-image: url(../img/sciana.jpg);
+ background-size: cover;
+background-attachment: fixed;
+}
+
+#formularz{
+background-color: #fff;
+padding-left: 50px;
+padding-bottom: 50px;
+}
+
+#naglowek_formularza{
+font-weight:700;
+color: #321f20;
+padding-top: 50px;
+}
+form{
+padding-top: 50px;
+color:#321f20;
+font-weight:bold;
+
+}
+.form-row{
+padding-bottom:20px;
+}
+#sukces{
+padding-top:100px;
+padding-bottom:100px;
+padding-left: 50px;
+background-color: #FFF;
+}
+#sukces h1{
+font-weight:700;
+padding-bottom: 25px;
+}
+#facebook{
+padding-top:50px;
+}
+#facebook img{
+height: 300px;
+weight: 300 px;
+}
+#yt{
+padding-top:50px;
+}
+#yt img{
+height: 300px;
+weight: 300 px;
+}

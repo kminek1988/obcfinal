@@ -1,0 +1,45 @@
+#kategoria_view_container{
+        background-color: #fff;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+#kategoria_view_container h2{
+    font-weight: 900;
+    color: #ee373a;
+}
+#kategoria_row{
+    padding-top: 50px;
+}
+.ikonki{
+    width: 180px;
+    height: 150px;
+}
+
+#ikonki {
+    text-align: center;
+
+    margin: 25px 25px 50px 25px;
+background-color: #ee373a;
+    padding-bottom: 25px;
+    height: 300px;
+    width: 200px;
+
+
+    
+}
+#ikonki h4{
+    padding-top: 10px;
+    padding-bottom: 5px;
+  
+
+}
+#ikonki img{
+
+}
+#ikonki a {
+    color: #fff;
+    font-weight: 600;
+}
+#button_opis{
+    padding-top: 25px;
+}

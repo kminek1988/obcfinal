@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+<section id="kategoria_wybor" class="container">
+    <div class="col-md-6 offset-md-3" id="kategoria_wybor_intro">
+    {% for profil in profil %}
+<h1>{{ user.profil }}</h1>
+<h2>Twoja kategoria to {{user.profil.kategoria}}</h2>
+        <h3>Jeżeli takie jest twoje życzenie wróć do <a href="{% url 'profil'  %}">PROFILU</a>.</h3>
+{% endfor %}
+    </div>
+<div class="col-md-6 offset-md-3">
+{% for city in miasto %}
+<h2>W innym wypadku przejrzyj dostępne kategorie w mieście: <strong>{{ city.title }}</strong></h2>
+<p> Jeżeli to nie jest miasto, które Cię interesuje <a href="{% url 'miasto_edit' %}" id="kliknij" >kliknij i wróć do listy miast</a></p>
+{% endfor %}
+
+<form method="post" id="kategorie_form" class="form-control">
+    {% csrf_token %}
+
+    <select class="form-control" name="droping">
+<option value="" selected="selected">-----</option>
+{% for category in kategoria %}
+
+    <option value="{{ category.id }}">{{ category }}</option>
+{% endfor %}
+</select>
+
+ <div id="kategorie_edit_button">
+     <button type="submit" value="my_field">WYŚLIJ</button>
+</div>
+</form>    
+</div>
+
+</section>
+{% endblock %}
